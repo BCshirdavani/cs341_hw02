@@ -36,12 +36,16 @@ class SocketGet
              */
             // String httpHeader = "GET / HTTP/1.1\r\n                      - COMPLETE THIS GET QUERY";
 
+
             // HTTP/1.1 400 Bad Request
             // String httpHeader = "GET /index.html HTTP/1.1\r\nHost: http://www.williammortl.com\r\nUser-Agent: Firefox/3.6.10\r\nAccept: text/html,application/xhtml+xml\r\nAccept-Language: en-us,en;q=0.5\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: ISO-8859-1,utf-8;q=0.7\r\nKeep-Alive: 115\r\nConnection: keep-alive\r\n\r\n";
 
 
             // HTTP/1.1 200 OK....but symbols returned are werid looking: ���� E�a�h
-            String httpHeader = "GET /index.html HTTP/1.1\r\nHost: www.williammortl.com\r\nUser-Agent: Firefox/3.6.10\r\nAccept: text/html,application/xhtml+xml\r\nAccept-Language: en-us,en;q=0.5\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: ISO-8859-1,utf-8;q=0.7\r\nKeep-Alive: 115\r\nConnection: keep-alive\r\n\r\n";
+            // String httpHeader = "GET /index.html HTTP/1.1\r\nHost: www.williammortl.com\r\nUser-Agent: Firefox/3.6.10\r\nAccept: text/html,application/xhtml+xml\r\nAccept-Language: en-us,en;q=0.5\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: ISO-8859-1,utf-8;q=0.7\r\nKeep-Alive: 115\r\nConnection: keep-alive\r\n\r\n";
+
+            // trying to resolve the strange characters that return...
+            String httpHeader = "GET /index.html HTTP/1.1\r\nHost: www.williammortl.com\r\n\r\n";
 
             // send the HTTP request
             request.println(httpHeader);
