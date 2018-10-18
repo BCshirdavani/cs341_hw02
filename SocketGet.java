@@ -11,6 +11,7 @@ class SocketGet
         {
             String urlString = args[0];
             URL httpUrl = new URL(urlString);
+            portNum = 80
 
             // TODO: open the socket below
             /* Useful links:
@@ -19,7 +20,8 @@ class SocketGet
              * 
              */
             // HINT: you need to create a new Socket object and use httpUrl to get some parameters for the constructor
-            Socket httpSocket = null;
+            // Socket httpSocket = null;
+            Socket httpSocket = Socket(InetAddress httpUrl, int portNum)
 
             // open up streams to write to and read from
             PrintWriter request = new PrintWriter(httpSocket.getOutputStream(), true);
